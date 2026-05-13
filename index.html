@@ -1,0 +1,165 @@
+export default function SimpleStaticWebsite() {
+  return (
+    <div className="min-h-screen bg-black text-white overflow-x-hidden font-sans">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-700 opacity-20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 opacity-20 blur-3xl rounded-full"></div>
+
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 backdrop-blur-lg bg-black/40 border-b border-white/10 px-8 py-5 flex justify-between items-center">
+        <h1 className="text-2xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          Portfolio
+        </h1>
+
+        <div className="flex gap-6 text-sm text-gray-300">
+          <a href="#about" className="hover:text-cyan-400 transition duration-300">
+            About
+          </a>
+          <a href="#projects" className="hover:text-cyan-400 transition duration-300">
+            Projects
+          </a>
+          <a href="#skills" className="hover:text-cyan-400 transition duration-300">
+            Skills
+          </a>
+          <a href="#contact" className="hover:text-cyan-400 transition duration-300">
+            Contact
+          </a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative flex flex-col items-center justify-center text-center px-6 py-36">
+        <div className="w-36 h-36 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 p-1 shadow-2xl animate-pulse">
+          <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-5xl font-bold">
+            JD
+          </div>
+        </div>
+
+        <h2 className="mt-10 text-6xl md:text-7xl font-black leading-tight bg-gradient-to-r from-white via-cyan-300 to-purple-400 bg-clip-text text-transparent">
+          Creative Developer
+        </h2>
+
+        <p className="mt-8 max-w-2xl text-lg text-gray-400 leading-8">
+          Building modern digital experiences with elegant interfaces,
+          responsive layouts, and smooth interactions.
+        </p>
+
+        <div className="mt-10 flex gap-5 flex-wrap justify-center">
+          <button className="px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 hover:scale-105 transition duration-300 shadow-lg shadow-cyan-500/20 font-semibold">
+            Explore Projects
+          </button>
+
+          <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 transition duration-300 backdrop-blur-lg">
+            Contact Me
+          </button>
+        </div>
+      </section>
+
+      {/* About */}
+      <section
+        id="about"
+        className="relative px-8 py-24 max-w-6xl mx-auto"
+      >
+        <div className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl hover:border-cyan-400/40 transition duration-500">
+          <h2 className="text-4xl font-bold mb-6">About Me</h2>
+
+          <p className="text-gray-400 leading-8 text-lg">
+            I design and develop clean, engaging, and responsive websites.
+            My focus is creating visually appealing interfaces with smooth
+            user experiences while keeping designs modern and minimal.
+          </p>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="px-8 py-24 max-w-7xl mx-auto">
+        <h2 className="text-5xl font-bold text-center mb-16">
+          Featured Projects
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-3 hover:border-cyan-400/50 transition duration-500 backdrop-blur-xl">
+            <div className="w-14 h-14 rounded-2xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:rotate-6 transition">
+              ✦
+            </div>
+
+            <h3 className="text-2xl font-semibold mb-4">Portfolio Site</h3>
+
+            <p className="text-gray-400 leading-7">
+              A stylish personal portfolio with smooth layouts and modern UI.
+            </p>
+          </div>
+
+          <div className="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-3 hover:border-purple-400/50 transition duration-500 backdrop-blur-xl">
+            <div className="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:rotate-6 transition">
+              ⚡
+            </div>
+
+            <h3 className="text-2xl font-semibold mb-4">Dashboard UI</h3>
+
+            <p className="text-gray-400 leading-7">
+              Interactive admin dashboard concept with responsive components.
+            </p>
+          </div>
+
+          <div className="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-3 hover:border-pink-400/50 transition duration-500 backdrop-blur-xl">
+            <div className="w-14 h-14 rounded-2xl bg-pink-500/20 flex items-center justify-center text-pink-400 text-2xl mb-6 group-hover:rotate-6 transition">
+              ✧
+            </div>
+
+            <h3 className="text-2xl font-semibold mb-4">Landing Page</h3>
+
+            <p className="text-gray-400 leading-7">
+              Modern startup landing page focused on clean visual storytelling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="px-8 py-24 text-center max-w-6xl mx-auto">
+        <h2 className="text-5xl font-bold mb-16">Skills</h2>
+
+        <div className="flex flex-wrap justify-center gap-5">
+          {[
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Tailwind',
+            'UI/UX',
+            'Responsive Design',
+          ].map((skill) => (
+            <div
+              key={skill}
+              className="px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/50 hover:bg-cyan-500/10 transition duration-300 cursor-pointer"
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="px-8 py-24 max-w-4xl mx-auto">
+        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-white/10 rounded-3xl p-12 text-center backdrop-blur-xl">
+          <h2 className="text-5xl font-bold mb-6">Let's Work Together</h2>
+
+          <p className="text-gray-400 text-lg leading-8 max-w-2xl mx-auto">
+            Interested in collaborating or building something amazing?
+            Reach out and let's create something impactful.
+          </p>
+
+          <button className="mt-10 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 hover:scale-105 transition duration-300 font-semibold shadow-lg shadow-purple-500/20">
+            Get In Touch
+          </button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-8 text-center text-gray-500 text-sm">
+        © 2026 Creative Portfolio. Designed with modern UI aesthetics.
+      </footer>
+    </div>
+  );
+}
